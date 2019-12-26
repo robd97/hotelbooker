@@ -1,0 +1,25 @@
+{% extends 'booking/base.html' %}
+
+{% block content %}
+
+    <div class="post">
+        <h1>Reservation Information</h1>
+        <div class="container-fluid">
+            <div class="jumbotron text-center">
+                <p style="display: inline-block;">
+                    Thank you for booking at Hotel Booker, enjoy your stay!<br><br>
+                    Reservation ID: {{reservationid}}  <br>
+                    {{hotel}} in {{city}} <br>
+                    {{firstname}} {{lastname}} <br>
+                    From: {{startdate}} To: {{enddate}}
+                </p>
+                <div>
+                <a onclick="return confirm('Are you sure you would like to cancel your reservation?');" href="{% url 'reservation_cancel' pk=reservationid %}" style= "color: aliceblue;"><button role="button" class="btn btn-secondary btn-lg">
+                    CANCEL</button></a>
+                <a href="{% url 'reservation_edit' pk=reservationid %}" style= "color: aliceblue;"><button role="button" class="btn btn-primary btn-lg">
+                    EDIT</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

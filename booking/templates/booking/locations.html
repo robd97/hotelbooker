@@ -1,0 +1,36 @@
+{% extends 'booking/base.html' %}
+
+{% block content %}
+<h1>  LOCATIONS  </h1>
+
+<br>
+{% load static %}
+{% if hotelList %}
+<div id ="gallery">
+    {% for hotel in hotelList %}
+        <div class="contain">
+          <a href="{% url 'reservation_new' city=hotel  %}">
+          <img class= "image" src="{% with 'cityPictures/'|add:hotel|add:'.png' as image_static %}
+          {% static image_static %}
+          {% endwith %}" alt="{{hotel}}.png"></a>
+
+            <p class = "myp">{{hotel}}</p>
+        </div>
+    {% endfor %}
+</div>
+{% else %}
+    <p>NO LOCATIONS ARE AVAILABLE.</p>
+{% endif %}
+
+
+<br>
+
+<div class="container-fluid">
+
+<div class="jumbotron text-center">
+
+<h3 class="center">Features:</h3>
+  <p>Still need to create pages for each item, and for the nike and adidas tab</p> 
+</div>
+</div>
+{% endblock %}

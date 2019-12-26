@@ -1,0 +1,258 @@
+h1
+    {
+        Color:rgb(255, 255, 255);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        background-color: #000000;
+        font: 12px;
+        box-shadow: 0px 0px 6px 2px #8a8a8a;
+        
+    }
+h2
+    {
+        Color:rgb(41, 0, 0);
+        background:rgba(0, 84, 209, 0.452);
+        border-bottom: 2px solid #000000;
+    }
+h3
+    {
+        Color:rgb(0, 0, 0);
+        background:rgb(227, 238, 255);
+        align-content: center;
+    }
+h5
+    {
+        align-content: left;
+    }
+p
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font: bold;
+        font-size:18px;
+        color:black;
+        align-content: block;
+    }
+
+.thisbody 
+    {
+        background-color: rgb(221, 221, 221);
+    }
+table   
+    {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }  
+td, th 
+    {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }  
+tr:nth-child(even) 
+    {
+    background-color: #e4e4e4;
+    }
+tr:nth-child(odd) 
+    {
+    background-color: #ffffff;
+    }
+.aBig
+    {
+    font-size: 100px;
+    }
+img
+    {
+    align-items: center;
+    }
+
+.important-span
+            {
+                color: red;
+                font-weight: bold;
+            }
+.reading
+        {
+            color: purple;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+.center
+        {
+            text-align: center;
+        }
+#gallery{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    margin: auto;
+    display: flex;
+    }
+.image  
+    {
+        width: 275px;
+        height: 150px;
+        margin: 8px;
+        box-shadow: 0 8px 6px -7px black;
+        border-radius: 25px;
+    }
+.image:hover + .centered{
+    display: block;
+}
+
+
+   
+.contain {
+    position: relative;
+    text-align: left;
+    color: white;
+    transition: transform .2s;
+    object-fit: cover;
+  }
+.contain:hover {
+    margin: 0px;
+    transform: scale(1.15);
+    object-fit: cover;
+    position: relative;
+    text-shadow:0px 0px 3px rgb(0, 0, 0);
+}
+
+  .centered {
+    position: absolute;
+    top: 37%;
+    left: 37%;
+    transform: translate(-45%, -50%);
+    display: none;
+  }
+  .centered:hover{
+      display: block;
+  }
+  .myp{
+      color: rgb(0, 0, 0);
+      text-shadow: 0px 0px 0px  #000000;
+      text-align: center;
+      overflow:hidden;
+
+  }
+  .myp:hover + .image{
+    display: block;
+  }
+  p:hover{
+      color: rgb(184, 0, 0);
+  }
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    margin: auto;
+    display: flex;
+}
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid rgb(190, 190, 190);
+  border-radius: 10px;
+}
+input[type=date]{
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 183, 255);
+    border-radius: 10px;    
+}
+input[type=number]{
+    padding: 12px 20px;
+    margin: 8px 0;
+    size: 4;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    border-radius: 10px;
+}
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    margin: auto;
+    display: flex;
+}
+#center{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    margin: auto;
+}
+#dates{
+ padding: 2%;
+ text-align: center;
+ font-size: medium;
+}
+.container1 input[type=text] {
+    width: 100%;
+    padding:5px 0px;
+    margin:5px 5px 5px 0px;
+    }
+    
+    .add_form_field
+    {
+        background-color: #1c97f3;
+        border: none;
+        color: white;
+        padding: 8px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+     border:1px solid #186dad;
+    }
+    .delete{
+        background-color: #fd1200;
+        border: none;
+        color: white;
+        padding: 5px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    border-radius: 10px;
+}
+.rooms{
+    width: 20px;
+    height: 20px;
+}
+ul{
+    color: rgb(255, 255, 255);
+}
+.navbar-custom .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+p{
+    display: flex;
+    align-items: center;   
+}
+form {
+    display: inline-block;
+}

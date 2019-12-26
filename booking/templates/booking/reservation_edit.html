@@ -1,0 +1,17 @@
+{% extends 'booking/base.html' %}
+
+{% block content %}
+    <h1>RESERVATION</h1>
+
+    <form method="POST" class="post-form" style="align-content: inline-block;">{% csrf_token %}
+    <div class="container-fluid">
+    <div class="jumbotron text-center" >
+            {{ form.as_p }}
+            <button type="Next" class="save btn btn-primary">Save</button>
+    </div>
+    </div>
+    </form>
+
+    <br>  
+    <h2>Guest(s)</h2>
+{% endblock %}

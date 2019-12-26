@@ -1,0 +1,31 @@
+{% extends 'booking/base.html' %}
+
+{% block content %}
+<h1>  ALL RESERVATIONS  </h1>
+<br>
+<div class="container-fluid">
+<div class="jumbotron text-center">
+
+{% if reservations %}
+<ul>
+    {% for reservation in reservations %}
+  <a href="{% url 'reservation_detail' pk=reservation.reservationid %}">
+    {{reservation.reservationid}} 
+    {{reservation.firstname}}
+    {{reservation.lastname}}
+    {{reservation.hotel_hotelid.name}}
+
+  </a>
+</p>
+</ul>
+    {% endfor %}
+</ul>
+{% else %}
+    <p>NO LOCATIONS ARE AVAILABLE.</p>
+{% endif %}
+</div>
+</div>
+
+<br>
+
+{% endblock %}

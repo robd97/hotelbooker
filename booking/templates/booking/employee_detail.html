@@ -1,0 +1,22 @@
+{% extends 'booking/base.html' %}
+
+{% block content %}
+
+    <div class="post">
+        <h1>Employee Information</h1>
+
+        <div class="container-fluid">
+            <div class="jumbotron text-center">
+                <p style="display: inline-block;">
+                    {% for worker in workers %}
+                        worker.ssn<br>
+                        worker.firstname<br>
+                        worker.lastname<br><br>
+                    {% endfor %}
+                </p>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

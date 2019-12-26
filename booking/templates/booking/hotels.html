@@ -1,0 +1,24 @@
+{% extends 'booking/base.html' %}
+
+
+{% block content %}
+<h1>  OUR HOTELS  </h1>
+
+<div class="container-fluid">
+
+<div class="jumbotron text-center">
+
+<h3 class="center">Features:</h3>
+  {% if hotels %}
+
+      {% for hotel in hotels %}
+      <h4>
+        {{hotel}} <br>
+      </h4><br>
+      {% endfor %}
+  {% else %}
+  <p>There are no reservations at this time</p>
+  {% endif %}
+</div>
+</div>
+{% endblock %}

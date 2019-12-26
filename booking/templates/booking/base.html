@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hotel Booker</title>
+    <link href="{% static 'css/mycss.css' %}" rel="stylesheet" type="text/css">
+    <link rel="icon" href="{% static 'cityPictures/hotel.png' %}" sizes="64x64"  type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+
+<body class="thisbody">
+    <nav class="navbar  navbar-expand-lg navbar-light sticky-top" style="background-color:rgba(0, 38, 82, 0.938)">
+        <div class="container mx-auto">
+    
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img class="img-fluid" src="{% static 'cityPictures/logo.png' %}" alt="logo" style= "height: 50px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active navtext" href="{% url 'hotels' %}" style= "color:rgb(78, 214, 255)">HOTELS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'reservation_new' %}" style= "color:rgb(78, 214, 255)">RESERVE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'locations' %}" style= "color:rgb(78, 214, 255)">LOCATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style= "color:rgb(78, 214, 255)">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style= "color:rgb(78, 214, 255)">CONTACT</a>
+                    </li>
+                
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" style="color: rgb(78, 214, 255);">Search</button>
+                    </form>
+                </ul>
+    
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+
+
+
+
+
